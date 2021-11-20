@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "calculadora de juros",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

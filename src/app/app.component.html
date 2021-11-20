@@ -1,0 +1,43 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title> Calculadora de Juros </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+  <ion-content>
+    <form [formGroup]="formGroup">
+      <ion-list>
+        <ion-item>
+          <ion-label color="primary">Capital </ion-label>
+          <ion-input
+            formControlName="campo_1"
+            [(ngModel)]="m1"
+            type="number"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary">Taxa % </ion-label>
+          <ion-input
+            formControlName="campo_2"
+            [(ngModel)]="m2"
+            type="number"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary">Tempo </ion-label>
+          <ion-input
+            formControlName="campo_3"
+            [(ngModel)]="m3"
+            type="number"
+          ></ion-input>
+        </ion-item>
+        <ion-item *ngIf="resultado"
+          >Juros {{ resultado }}
+        </ion-item>
+      </ion-list>
+    </form>
+    <ion-button [disabled]="formGroup.invalid" (click)="calcular()"color="primary">Calcular</ion-button>
+    </ion-content>
+</ion-app>
